@@ -26,3 +26,6 @@ Our goal is outputing a 3d mesh with real texture from a set of images. Like thi
 # Schedule
 2021-6-11: Completing work : loading images and displaying them.<br>
 ![image](https://user-images.githubusercontent.com/62642008/121714736-b87c4800-cb10-11eb-9104-4b323544e761.png)
+
+# Blogs
+If you are Chinese, you can fllow my blog : [https://blog.csdn.net/rs_lys](https://blog.csdn.net/rs_lys)
