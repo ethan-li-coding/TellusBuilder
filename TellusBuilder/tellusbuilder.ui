@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TellusBuilderClass</class>
+ <widget class="QMainWindow" name="TellusBuilderClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>2440</width>
+    <height>1440</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>TellusBuilder</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgba(36, 36, 36, 255);</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <widget class="QTabWidget" name="tab_mainview">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>2000</width>
+      <height>1091</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::TabFocus</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(80, 80, 80);</string>
+    </property>
+    <property name="tabPosition">
+     <enum>QTabWidget::North</enum>
+    </property>
+    <property name="tabShape">
+     <enum>QTabWidget::Rounded</enum>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <property name="usesScrollButtons">
+     <bool>false</bool>
+    </property>
+    <property name="documentMode">
+     <bool>false</bool>
+    </property>
+    <property name="tabsClosable">
+     <bool>false</bool>
+    </property>
+    <property name="movable">
+     <bool>false</bool>
+    </property>
+    <property name="tabBarAutoHide">
+     <bool>false</bool>
+    </property>
+    <widget class="QWidget" name="widget_model">
+     <attribute name="title">
+      <string>Model</string>
+     </attribute>
+    </widget>
+    <widget class="QImgViewWidget" name="widght_imgview">
+     <attribute name="title">
+      <string>Photo</string>
+     </attribute>
+    </widget>
+   </widget>
+   <widget class="QTabWidget" name="tab_info">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>1100</y>
+      <width>2000</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(80, 80, 80);</string>
+    </property>
+    <property name="tabPosition">
+     <enum>QTabWidget::South</enum>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="widget_previews">
+     <attribute name="title">
+      <string>Photos</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="widget_console">
+     <attribute name="title">
+      <string>Console</string>
+     </attribute>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>2440</width>
+     <height>36</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(36, 36, 36);
+padding: 5px;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="defaultUp">
+    <bool>false</bool>
+   </property>
+   <property name="nativeMenuBar">
+    <bool>true</bool>
+   </property>
+   <widget class="QMenu" name="menu_file">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="action_addimages"/>
+   </widget>
+   <widget class="QMenu" name="menu_builder">
+    <property name="title">
+     <string>Build</string>
+    </property>
+    <addaction name="action_sfm"/>
+   </widget>
+   <addaction name="menu_file"/>
+   <addaction name="menu_builder"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QDockWidget" name="dock_workspace">
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(150, 150, 150);
+background-color: rgb(36, 36, 36);
+border:1px;</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="widget_workspace">
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(80, 80, 80);
+color: rgb(255, 255, 255);</string>
+    </property>
+    <widget class="QTreeView" name="tree_images">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>261</width>
+       <height>900</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="headerHidden">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <action name="action_sfm">
+   <property name="text">
+    <string>Structure From Motion</string>
+   </property>
+  </action>
+  <action name="action_addimages">
+   <property name="text">
+    <string>Add Images</string>
+   </property>
+  </action>
+  <zorder>dock_workspace</zorder>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QImgViewWidget</class>
+   <extends>QWidget</extends>
+   <header>qimgviewwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="tellusbuilder.qrc"/>
+ </resources>
+ <connections/>
+</ui>
