@@ -16,16 +16,22 @@ Our goal is outputing a 3d mesh with real texture from a set of images. Like thi
 ![image](https://user-images.githubusercontent.com/62642008/121713577-99c98180-cb0f-11eb-8391-dee367bd4d4c.png)
 
 # Dependencies
-**1. opencv 3.1.0**<br>
-**2. Eigen 3.2.8**<br>
-(you can download the above two from [https://download.csdn.net/download/rs_lys/14981085](https://download.csdn.net/download/rs_lys/14981085))<br>
-**3. QT 5.12.9** (it's ok to configure your own version)<br>
-[**4. OpenMVG**](https://github.com/openMVG/openMVG)<br>
-[**5. OpenMVS**](https://github.com/cdcseacave/openMVS)<br>
+**1. QT 5.12.9** (it's ok to configure your own version)<br>
+[**2. OpenMVG**](https://github.com/openMVG/openMVG)(it's not needed now)<br>
+[**3. OpenMVS**](https://github.com/cdcseacave/openMVS)(it's not needed now)<br>
 
 # Schedule
-2021-6-11: Completing work : loading images and displaying them.<br>
-![image](https://user-images.githubusercontent.com/62642008/121714736-b87c4800-cb10-11eb-9104-4b323544e761.png)
+2021-6-16: <br>
+Completed works :
+1. Image zooming and moving with mouse interaction
+2. Images' previews
+3. Windows' size adaptation
+
+![image](https://user-images.githubusercontent.com/62642008/122242616-0d93d180-cef6-11eb-873f-7122992d92d5.png)
+
+2021-6-11: <br>
+Completed works : 
+1. loading images and displaying them.<br>
 
 # Blogs
-If you are Chinese, you can fllow my blog : [https://blog.csdn.net/rs_lys](https://blog.csdn.net/rs_lys)
+If you are a Chinese, welcome to fllow my blog : [https://blog.csdn.net/rs_lys](https://blog.csdn.net/rs_lys)
