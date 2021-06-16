@@ -15,12 +15,18 @@ public:
 	/**\brief  get the pointer of project*/
     TellusProject* get_project(){ return &tellus_project_; }
 
+    /**\brief  get the pointer of ui*/
+	Ui::TellusBuilderClass* get_ui() { return &ui; }
+
 	/** ui */
     void InitTreeView();
-    void UpdateTreeView();
+    void InitPreviewView();
     void InitDockView();
     void InitTabView();
     void InitLayout();
+    void UpdateTreeView();
+    void UpdatePreviewView();
+    
 
 private:
 	/** main project*/
@@ -36,4 +42,6 @@ private:
 
 protected:
 	void paintEvent(QPaintEvent* event) override;
+    void resizeEvent(QResizeEvent* event) override;
 };
+

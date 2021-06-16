@@ -7,16 +7,6 @@
 using std::vector;
 using std::string;
 
-// 3rdparty-opencv
-#include "cv.hpp"
-#ifdef _DEBUG
-#pragma comment(lib,"opencv_world310d.lib")
-#else
-#pragma comment(lib,"opencv_world310.lib")
-#endif
-
-#include "../utils/camera/camera.h"
-
 namespace tellus {
 class Image
 {
@@ -31,6 +21,8 @@ public:
 			pos = path_.find_last_of('/') + 1;
 		}
 		name_ = path_.substr(pos, path_.length() - pos);
+		pos = name_.find_last_of('.');
+		name_ = name_.substr(0, pos);
 	}
 
 	/** set id of belonging camera*/

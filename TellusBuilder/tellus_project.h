@@ -9,13 +9,17 @@ public:
 	~TellusProject();
 
 public:
-	bool AddImage(string img_path);
+	bool AddImages(const vector<string>& img_paths);
 
 	const vector<Image>& GetAllImages();
+	
+	const vector<Image>& GetNewAddingImages();
 private:
 	/** vector of all images */
 	vector<Image> all_images_;
-	
+
+	/** vector of new adding images */
+	vector<Image> new_images_;
 };
 
 #endif

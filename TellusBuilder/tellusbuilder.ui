@@ -16,7 +16,7 @@
   <property name="styleSheet">
    <string notr="true">background-color: rgba(36, 36, 36, 255);</string>
   </property>
-  <widget class="QWidget" name="centralWidget">
+  <widget class="QWidget" name="central_widget">
    <property name="styleSheet">
     <string notr="true"/>
    </property>
@@ -45,7 +45,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <property name="usesScrollButtons">
      <bool>false</bool>
@@ -66,6 +66,16 @@
      <attribute name="title">
       <string>Model</string>
      </attribute>
+     <widget class="QModelViewGLWidget" name="widget_gl_model">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>300</width>
+        <height>200</height>
+       </rect>
+      </property>
+     </widget>
     </widget>
     <widget class="QImgViewWidget" name="widght_imgview">
      <attribute name="title">
@@ -93,8 +103,27 @@
     </property>
     <widget class="QWidget" name="widget_previews">
      <attribute name="title">
-      <string>Photos</string>
+      <string>Preiews</string>
      </attribute>
+     <widget class="QListWidget" name="list_previews">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>256</width>
+        <height>192</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="viewMode">
+       <enum>QListView::IconMode</enum>
+      </property>
+      <property name="selectionRectVisible">
+       <bool>false</bool>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="widget_console">
      <attribute name="title">
@@ -103,13 +132,13 @@
     </widget>
    </widget>
   </widget>
-  <widget class="QMenuBar" name="menuBar">
+  <widget class="QMenuBar" name="menu_bar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
      <width>2440</width>
-     <height>36</height>
+     <height>33</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -138,7 +167,7 @@ color: rgb(255, 255, 255);</string>
    <addaction name="menu_file"/>
    <addaction name="menu_builder"/>
   </widget>
-  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QStatusBar" name="status_bar"/>
   <widget class="QDockWidget" name="dock_workspace">
    <property name="font">
     <font>
@@ -179,6 +208,21 @@ color: rgb(255, 255, 255);</string>
     </widget>
    </widget>
   </widget>
+  <widget class="QDockWidget" name="dock_log">
+   <property name="styleSheet">
+    <string notr="true">color: rgb(150, 150, 150);
+background-color: rgb(36, 36, 36);
+border:1px;</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="widget_log">
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(80, 80, 80);</string>
+    </property>
+   </widget>
+  </widget>
   <action name="action_sfm">
    <property name="text">
     <string>Structure From Motion</string>
@@ -190,6 +234,7 @@ color: rgb(255, 255, 255);</string>
    </property>
   </action>
   <zorder>dock_workspace</zorder>
+  <zorder>dock_log</zorder>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
@@ -198,6 +243,11 @@ color: rgb(255, 255, 255);</string>
    <extends>QWidget</extends>
    <header>qimgviewwidget.h</header>
    <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QModelViewGLWidget</class>
+   <extends>QOpenGLWidget</extends>
+   <header>qmodelviewglwidget.h</header>
   </customwidget>
  </customwidgets>
  <resources>

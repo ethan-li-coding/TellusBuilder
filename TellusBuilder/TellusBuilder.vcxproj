@@ -60,18 +60,18 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(SolutionDir)3rdparty\Opencv\include;$(SolutionDir)3rdparty\Opencv\include\opencv;$(SolutionDir)3rdparty\Opencv\include\opencv2;$(SolutionDir)3rdparty\Eigen\Eigen3;$(SolutionDir)src\camera;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>$(SolutionDir)3rdparty\OpenCV\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(SolutionDir)3rdparty\Opencv\include;$(SolutionDir)3rdparty\Opencv\include\opencv;$(SolutionDir)3rdparty\Opencv\include\opencv2;$(SolutionDir)3rdparty\Eigen\Eigen3;$(SolutionDir)src\camera;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>$(SolutionDir)3rdparty\OpenCV\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
@@ -105,12 +105,17 @@
     <QtUic Include="tellusbuilder.ui" />
     <QtMoc Include="tellusbuilder.h" />
     <ClCompile Include="QImgViewWidget.cpp" />
+    <ClCompile Include="QModelViewGLWidget.cpp" />
+    <ClCompile Include="QUpdatePreviewThread.cpp" />
     <ClCompile Include="tulles_project.cpp" />
     <ClCompile Include="tellusbuilder.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="QImgViewWidget.h" />
+    <QtMoc Include="QUpdatePreviewThread.h" />
+    <ClInclude Include="QModelViewGLWidget.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="tellus_project.h" />
     <ClInclude Include="tellus_types.h" />
     <ClInclude Include="tellus_utils.h" />
